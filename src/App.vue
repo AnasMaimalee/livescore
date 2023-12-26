@@ -1,0 +1,765 @@
+<template>
+  <div class="section">
+        <div class="header">
+          <span @click="openNav" class="sidebtn">
+            <div class="i-line">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </span>
+          <span class="livescore">LiveScore</span>
+          <span class="search-btn"  @click="openSearchnav"><i class="bi bi-search"></i></span>
+        </div>
+
+          <!-- sidebar  -->
+          <div class="sidenav" id="mySidenav">
+            <div class="top-nav">
+              <div class="left">
+                <a href="">Link 1</a>
+                <a href="">Link 1</a>
+                <a href="">Link 1</a>
+                <a href="">Link 1</a>
+                <a href="">Link 1</a>
+              </div>
+              <div class="right">
+                <a href="javascript:void(0)" class="closebtn" @click="closeNav">x</a>
+              </div>
+            </div>
+          </div>
+          <!-- end of side bar  -->
+          <!-- searchbar  -->
+          <div class="searchnav" id="mySearchnav">
+            <div class="search-top">
+              <div class="left">
+                <a href="javascript:void(0)" class="closebtn" @click="closeSearchNav">x</a>
+              </div>
+              <div class="right">
+                <a href="">Link 1</a>
+                <a href="">Link 1</a>
+                <a href="">Link 1</a>
+                <a href="">Link 1</a>
+                <a href="">Link 1</a>
+              </div>
+            </div>
+          </div>
+          <!-- end of search nav  -->
+
+          <!-- body  -->
+          <div class="body-top">
+            <a href="">Football</a>
+            <a href="">Hockey</a>
+            <a href="">BasketBall</a>
+            <a href="">Tennis</a>
+            <a href="">Cricket</a>
+            <a href="">Formula1</a>
+            <a href="">Race</a>
+         </div>
+<br>
+          <!-- betadvert  -->
+          <div class="bet-advert">
+            <div class="ls-bet">
+              <span>LS</span>
+              <span>Bet</span>
+            </div>
+            <div class="center">
+              N100,000 Welcome Bonus <br>
+              when yo join Livescore Bet*
+            </div>
+            <div class="end">
+              <span>GET NOW</span>
+            </div>
+          </div>
+          <div class="country-leagues">
+            <div class="country-matches-header">
+              <div class="country-detail">
+                <div class="img-logo">
+                  <div class="country-info">
+                    <img src="./assets/download.png" alt="">
+                    <div class="country-name">
+                      <span>Premier Leaque</span>
+                       <span>England</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="right-arraw">
+                  &gt;
+                </div>
+              </div>
+            </div>
+            <!-- maches  --> 
+            <div class="matches">
+              <div class="time">
+                HT
+              </div>
+              <div class="club-logo">
+                <div class="logo-home">
+                    <img src="./assets/manchester.png" alt="">
+                  </div> 
+                  <div class="logo-away">
+                    <img src="./assets/astonvilla.jpeg" alt="">
+                </div>
+              </div>
+              <div class="club-name">
+                    <div class="home-name">
+                      Manchester United
+                    </div>
+                    <div class="away-name">
+                      Manchester United
+                    </div>
+              </div>
+              <div class="score">
+                <span class="home">5</span>
+                <span class="away">0</span>
+              </div>
+              <div class="fav">
+                <i class="bi bi-heart"></i>
+              </div>
+            </div>
+            <!-- 2nd -->
+            <a href="">
+              <div class="matches">
+                <div class="time">
+                  69:34
+                </div>
+                <div class="club-logo">
+                  <div class="logo-home">
+                    <img src="./assets/manchester.png" alt="">
+                  </div> 
+                  <div class="logo-away">
+                    <img src="./assets/astonvilla.jpeg" alt="">
+                </div>
+                </div>
+                <div class="club-name">
+                      <div class="home-name">
+                        Manchester United
+                      </div>
+                      <div class="away-name">
+                        Manchester United
+                      </div>
+                </div>
+                <div class="score">
+                  <span class="home">5</span>
+                  <span class="away">0</span>
+                </div>
+                <div class="fav">
+                  <i class="bi bi-heart"></i>
+                </div>
+              </div>
+            </a>
+            <!-- 3rd -->
+            <div class="matches">
+              <div class="time">
+                69:34
+              </div>
+              <div class="club-logo">
+                <div class="logo-home">
+                    <img src="./assets/manchester.png" alt="">
+                  </div> 
+                  <div class="logo-away">
+                    <img src="./assets/astonvilla.jpeg" alt="">
+                </div>
+              </div>
+              <div class="club-name">
+                    <div class="home-name">
+                      Manchester United
+                    </div>
+                    <div class="away-name">
+                      Manchester United
+                    </div>
+              </div>
+              <div class="score">
+                <span class="home">5</span>
+                <span class="away">0</span>
+              </div>
+              <div class="fav">
+                <i class="bi bi-heart"></i>
+              </div>
+            </div>
+            <!-- 4th -->
+            <div class="matches">
+              <div class="time">
+                69:34
+              </div>
+              <div class="club-logo">
+                <div class="logo-home">
+                    <img src="./assets/manchester.png" alt="">
+                  </div> 
+                  <div class="logo-away">
+                    <img src="./assets/astonvilla.jpeg" alt="">
+                </div>
+              </div>
+              <div class="club-name">
+                    <div class="home-name">
+                      Manchester United
+                    </div>
+                    <div class="away-name">
+                      Manchester United
+                    </div>
+              </div>
+              <div class="score">
+                <span class="home">5</span>
+                <span class="away">0</span>
+              </div>
+              <div class="fav">
+                <i class="bi bi-heart"></i>
+              </div>
+            </div>
+            <!-- 5th -->
+            <div class="matches">
+              <div class="time">
+                HT
+              </div>
+              <div class="club-logo">
+               <div class="logo-home">
+                    <img src="./assets/manchester.png" alt="">
+                  </div> 
+                  <div class="logo-away">
+                    <img src="./assets/astonvilla.jpeg" alt="">
+                </div>
+              </div>
+              <div class="club-name">
+                    <div class="home-name">
+                      Manchester United
+                    </div>
+                    <div class="away-name">
+                      Manchester United
+                    </div>
+              </div>
+              <div class="score">
+                <span class="home">5</span>
+                <span class="away">0</span>
+              </div>
+              <div class="fav">
+                <i class="bi bi-heart"></i>
+              </div>
+            </div>
+            <!-- 6th  -->
+            <div class="matches">
+              <div class="time">
+                69:34
+              </div>
+              <div class="club-logo">
+                <div class="logo-home">
+                    <img src="./assets/manchester.png" alt="">
+                  </div> 
+                  <div class="logo-away">
+                    <img src="./assets/astonvilla.jpeg" alt="">
+                </div>
+              </div>
+              <div class="club-name">
+                    <div class="home-name">
+                      Manchester United
+                    </div>
+                    <div class="away-name">
+                      Aston Villa
+                    </div>
+              </div>
+              <div class="score">
+                <span class="home">5</span>
+                <span class="away">0</span>
+              </div>
+              <div class="fav">
+                <i class="bi bi-heart"></i>
+              </div>
+            </div>
+          </div>
+          <!-- spain  -->
+          <div class="country-leagues">
+            <div class="country-matches-header">
+              <div class="country-detail">
+                <div class="img-logo">
+                  <div class="country-info">
+                    <img src="./assets/spain.png" alt="">
+                    <div class="country-name">
+                      <span>Laliga Leaque</span>
+                       <span>Spain</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="right-arraw">
+                  &gt;
+                </div>
+              </div>
+            </div>
+            <!-- maches  --> 
+            <div class="matches">
+              <div class="time">
+                69:34
+              </div>
+              <div class="club-logo">
+                <div class="logo-home">
+                    <img src="./assets/barcelona.png" alt="">
+                  </div> 
+                  <div class="logo-away">
+                    <img src="./assets/realmadrid.png" alt="">
+                </div>
+              </div>
+              <div class="club-name">
+                    <div class="home-name">
+                      Manchester United
+                    </div>
+                    <div class="away-name">
+                      Manchester United
+                    </div>
+              </div>
+              <div class="score">
+                <span class="home">5</span>
+                <span class="away">0</span>
+              </div>
+              <div class="fav">
+                <i class="bi bi-heart"></i>
+              </div>
+            </div>
+            <!-- 2nd -->
+            <div class="matches">
+              <div class="time">
+                69:34
+              </div>
+              <div class="club-logo">
+                <div class="logo-home">
+                    <img src="./assets/barcelona.png" alt="">
+                  </div> 
+                  <div class="logo-away">
+                    <img src="./assets/realmadrid.png" alt="">
+                </div>
+              </div>
+              <div class="club-name">
+                    <div class="home-name">
+                      Manchester United
+                    </div>
+                    <div class="away-name">
+                      Manchester United
+                    </div>
+              </div>
+              <div class="score">
+                <span class="home">5</span>
+                <span class="away">0</span>
+              </div>
+              <div class="fav">
+                <i class="bi bi-heart"></i>
+              </div>
+            </div>
+            <!-- 3rd -->
+            <div class="matches">
+              <div class="time">
+                HT
+              </div>
+              <div class="club-logo">
+                <div class="logo-home">
+                    <img src="./assets/barcelona.png" alt="">
+                  </div> 
+                  <div class="logo-away">
+                    <img src="./assets/realmadrid.png" alt="">
+                </div>
+              </div>
+              <div class="club-name">
+                    <div class="home-name">
+                      Manchester United
+                    </div>
+                    <div class="away-name">
+                      Manchester United
+                    </div>
+              </div>
+              <div class="score">
+                <span class="home">5</span>
+                <span class="away">0</span>
+              </div>
+              <div class="fav">
+                <i class="bi bi-heart"></i>
+              </div>
+            </div>
+            <!-- 4th -->
+            <div class="matches">
+              <div class="time">
+                69:34
+              </div>
+              <div class="club-logo">
+                <div class="logo-home">
+                    <img src="./assets/barcelona.png" alt="">
+                  </div> 
+                  <div class="logo-away">
+                    <img src="./assets/realmadrid.png" alt="">
+                </div>
+              </div>
+              <div class="club-name">
+                    <div class="home-name">
+                      Manchester United
+                    </div>
+                    <div class="away-name">
+                      Manchester United
+                    </div>
+              </div>
+              <div class="score">
+                <span class="home">5</span>
+                <span class="away">0</span>
+              </div>
+              <div class="fav">
+                <i class="bi bi-heart"></i>
+              </div>
+            </div>
+            <!-- 5th -->
+            <div class="matches">
+              <div class="time">
+                69:34
+              </div>
+              <div class="club-logo">
+                <div class="logo-home">
+                    <img src="./assets/barcelona.png" alt="">
+                  </div> 
+                  <div class="logo-away">
+                    <img src="./assets/realmadrid.png" alt="">
+                </div>
+              </div>
+              <div class="club-name">
+                    <div class="home-name">
+                      Manchester United
+                    </div>
+                    <div class="away-name">
+                      Manchester United
+                    </div>
+              </div>
+              <div class="score">
+                <span class="home">5</span>
+                <span class="away">0</span>
+              </div>
+              <div class="fav">
+                <i class="bi bi-heart"></i>
+              </div>
+            </div>
+            <!-- 6th  -->
+            <div class="matches">
+              <div class="time">
+                69:34
+              </div>
+              <div class="club-logo">
+                <div class="logo-home">
+                    <img src="./assets/barcelona.png" alt="">
+                  </div> 
+                  <div class="logo-away">
+                    <img src="./assets/realmadrid.png" alt="">
+                </div>
+              </div>
+              <div class="club-name">
+                    <div class="home-name">
+                      Barcelona
+                    </div>
+                    <div class="away-name">
+                      Real Madrid
+                    </div>
+              </div>
+              <div class="score">
+                <span class="home">5</span>
+                <span class="away">0</span>
+              </div>
+              <div class="fav">
+                <i class="bi bi-heart"></i>
+              </div>
+            </div>
+         
+          
+          </div>
+          <!-- footer  -->
+          <div class="footer">
+            <div class="contain">
+              <div class="first">
+                <img src="./assets/ball.png" alt="">
+                <span class="title">Scores</span>
+              </div>
+              <div class="second">
+                <i class="bi bi-heart"></i>
+                <span class="title">Favourite</span>
+              </div>
+              <div class="third">
+                <i class="bi bi-newspaper"></i>
+                <span class="title">News</span>
+              </div>
+              <div class="forth">
+                <div class="ls-bet-down">
+                  <span>LS</span>
+                  <span>Bet</span>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>  
+</template>
+<script setup>
+
+       function openNav(){
+        document.getElementById("mySidenav").style.width = "250px";
+       }
+       function closeNav(){
+        document.getElementById("mySidenav").style.width = "0px";
+       }
+
+       function openSearchnav(){
+        document.getElementById("mySearchnav").style.width = "100%"
+       }
+       function closeSearchNav(){
+        document.getElementById("mySearchnav").style.width = "0px";
+       }
+    </script>
+<style>
+@media screen and (max-width:370px) {
+          body{
+            background-color: #222831;
+            color: #fff;
+          }
+          a{
+            text-decoration: none;
+            color: white;
+          }
+          .section{
+            margin-bottom: 70px;
+            flex: 1;
+          }
+          .header{
+            /* background-color: #111; */
+            padding: 5px;
+            color: white;
+            display: flex;
+            border-bottom: 1px solid #fff;
+            justify-content: space-between;
+          }
+          .header>:first-child{
+           color: #fff;
+           margin-top: 2;
+
+          }
+          .header>:last-child{
+            border:none;margin-top: 4px;margin-right: 7px;
+            /* background-color: black; */
+          }
+          .sidebtn{
+            margin-top: 6px;
+            margin-left: 10px;
+          }
+        
+          .line{
+            width: 10px;
+            border-top: 1px solid #fff;
+            color: #fff;
+            padding: 3px;
+          }
+         .sidenav{
+            height: 100% ;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: -3;
+            background-color: #222831;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            border-right: 1px solid  #fff;
+         }
+        
+         .sidenav a{
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+         }
+         .sidenav a:hover{
+          color :#f1f1f1
+         }
+         .closebtn{
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+         }
+         /* livescore  */
+         .livescore{
+          font-size: 1.5em;
+         }
+         /* search part  */
+         .searchnav{
+            height: 100% ;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #222831;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+         }
+         .search-top{
+         
+         }
+         /* main top body  */
+         .body-top{
+          margin-top: 10px;
+          display: flex;
+          /* justify-content: space-around; */
+          overflow-x: scroll;
+         }
+         .body-top a{
+          text-decoration: none;
+          padding: 10px;
+          background-color: #fff;
+          border-radius: 20px;
+          color: #818181;
+          margin-left: 15px;
+          width: auto;
+          /* overflow: scroll; */
+         }
+         .bet-advert{
+          color: #fff;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          background-color: #cf4647;
+          padding: 10px;
+          border-radius: 8px;
+          margin-left: 5px;
+         }
+         .ls-bet{
+          background-color: #ff5722;
+          padding: 8px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-radius: 8px;
+         }
+         .ls-bet>:first-child{
+          color: #222831;
+         }
+         .end{
+          background-color: #222831;
+          padding: 9px;
+          border-radius: 7px;
+         }
+         /* country matchesheader */
+         .country-detail{
+          display: flex;
+          justify-content: space-between;
+          margin: 20px 15px;
+          align-items: center;
+         }
+         .right-arraw{
+          
+         }
+         .country-info{
+          display: flex;
+          justify-content: space-between ;
+          
+         }
+         .country-info img{
+          width: 30px;
+          height: 30px;
+          margin-right: 9px;
+         }
+         .country-name{
+          display: flex;
+          flex-direction: column;
+         }
+         .country-name>:first-child{
+          font-weight: bolder;
+          font-size: large;
+          margin-top: -5px;
+         }
+         /* matches  */
+         .matches{
+          background-color: #434343;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 5px;
+          margin: 1px 5px;
+          border-radius: 5px;
+          border-left: 3px solid  #ff5722;
+          margin-top: 5px;
+         }
+         .matches .time{
+          display: flex;
+          width: 40px;
+         }
+         .club-logo{
+          /* margin-left: -20px; */
+          flex-grow: 0.001;
+         }
+         .club-logo img{
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          margin-top: 5px;
+         }
+         .logo-clubNames{
+          display: flex;
+          flex-direction: column;
+          /* margin-left: -30px; */
+         }
+         .club-name{
+          /* margin-left: -20px; */
+          flex-grow: 0.8;
+         }
+         .club-name .away-name{
+          margin-bottom: -5px;
+         }
+         .score{
+          display: grid;
+          /* margin-left: 50px; */
+         }
+         .home-name, .score .home{
+          margin-bottom: 4px;
+          font-size: x-small;
+
+         }
+         .away-name, .score .away{
+          margin-top: 6gpx;
+          font-size: x-small;
+
+         }
+         .matches>:last-child{
+          margin-right: 10px;
+         }
+         .footer{
+          /* display: flex;
+          justify-content: space-between;
+          align-items: center; */
+          background-color: #212121;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          columns: #fff;
+          padding: 10px ;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+         }
+         .footer div{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin: 0px 5px;
+         }
+         .contain .first img{
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+         }
+         .first, .second, .third{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+         }
+         .ls-bet-down{
+          font-size: x-small;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 5px;
+          background-color: #ff5722;
+          border-radius: 5px;
+         }
+        }
+       </style>
