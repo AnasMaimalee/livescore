@@ -71,395 +71,23 @@
             </div>
           </div>
           <div class="country-leagues">
-            <div class="country-matches-header">
-              <div class="country-detail">
-                <div class="img-logo">
-                  <div class="country-info">
-                    <img src="./assets/download.png" alt="">
-                    <div class="country-name">
-                      <span>Premier Leaque</span>
-                       <span>England</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="right-arraw">
-                  &gt;
-                </div>
-              </div>
-            </div>
+            
             <!-- maches  --> 
-            <div class="matches">
-              <div class="time">
-                HT
-              </div>
-              <div class="club-logo">
-                <div class="logo-home">
-                    <img src="./assets/manchester.png" alt="">
-                  </div> 
-                  <div class="logo-away">
-                    <img src="./assets/astonvilla.jpeg" alt="">
-                </div>
-              </div>
-              <div class="club-name">
-                    <div class="home-name">
-                      Manchester United
-                    </div>
-                    <div class="away-name">
-                      Manchester United
-                    </div>
-              </div>
-              <div class="score">
-                <span class="home">5</span>
-                <span class="away">0</span>
-              </div>
-              <div class="fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-            <!-- 2nd -->
-            <a href="">
-              <div class="matches">
-                <div class="time">
-                  69:34
-                </div>
-                <div class="club-logo">
-                  <div class="logo-home">
-                    <img src="./assets/manchester.png" alt="">
-                  </div> 
-                  <div class="logo-away">
-                    <img src="./assets/astonvilla.jpeg" alt="">
-                </div>
-                </div>
-                <div class="club-name">
-                      <div class="home-name">
-                        Manchester United
-                      </div>
-                      <div class="away-name">
-                        Manchester United
-                      </div>
-                </div>
-                <div class="score">
-                  <span class="home">5</span>
-                  <span class="away">0</span>
-                </div>
-                <div class="fav">
-                  <i class="bi bi-heart"></i>
-                </div>
-              </div>
-            </a>
-            <!-- 3rd -->
-            <div class="matches">
-              <div class="time">
-                69:34
-              </div>
-              <div class="club-logo">
-                <div class="logo-home">
-                    <img src="./assets/manchester.png" alt="">
-                  </div> 
-                  <div class="logo-away">
-                    <img src="./assets/astonvilla.jpeg" alt="">
-                </div>
-              </div>
-              <div class="club-name">
-                    <div class="home-name">
-                      Manchester United
-                    </div>
-                    <div class="away-name">
-                      Manchester United
-                    </div>
-              </div>
-              <div class="score">
-                <span class="home">5</span>
-                <span class="away">0</span>
-              </div>
-              <div class="fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-            <!-- 4th -->
-            <div class="matches">
-              <div class="time">
-                69:34
-              </div>
-              <div class="club-logo">
-                <div class="logo-home">
-                    <img src="./assets/manchester.png" alt="">
-                  </div> 
-                  <div class="logo-away">
-                    <img src="./assets/astonvilla.jpeg" alt="">
-                </div>
-              </div>
-              <div class="club-name">
-                    <div class="home-name">
-                      Manchester United
-                    </div>
-                    <div class="away-name">
-                      Manchester United
-                    </div>
-              </div>
-              <div class="score">
-                <span class="home">5</span>
-                <span class="away">0</span>
-              </div>
-              <div class="fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-            <!-- 5th -->
-            <div class="matches">
-              <div class="time">
-                HT
-              </div>
-              <div class="club-logo">
-               <div class="logo-home">
-                    <img src="./assets/manchester.png" alt="">
-                  </div> 
-                  <div class="logo-away">
-                    <img src="./assets/astonvilla.jpeg" alt="">
-                </div>
-              </div>
-              <div class="club-name">
-                    <div class="home-name">
-                      Manchester United
-                    </div>
-                    <div class="away-name">
-                      Manchester United
-                    </div>
-              </div>
-              <div class="score">
-                <span class="home">5</span>
-                <span class="away">0</span>
-              </div>
-              <div class="fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-            <!-- 6th  -->
-            <div class="matches">
-              <div class="time">
-                69:34
-              </div>
-              <div class="club-logo">
-                <div class="logo-home">
-                    <img src="./assets/manchester.png" alt="">
-                  </div> 
-                  <div class="logo-away">
-                    <img src="./assets/astonvilla.jpeg" alt="">
-                </div>
-              </div>
-              <div class="club-name">
-                    <div class="home-name">
-                      Manchester United
-                    </div>
-                    <div class="away-name">
-                      Aston Villa
-                    </div>
-              </div>
-              <div class="score">
-                <span class="home">5</span>
-                <span class="away">0</span>
-              </div>
-              <div class="fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-          </div>
+            <england>
+
+            </england>
+            <spain>
+
+            </spain>
           <!-- spain  -->
-          <div class="country-leagues">
-            <div class="country-matches-header">
-              <div class="country-detail">
-                <div class="img-logo">
-                  <div class="country-info">
-                    <img src="./assets/spain.png" alt="">
-                    <div class="country-name">
-                      <span>Laliga Leaque</span>
-                       <span>Spain</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="right-arraw">
-                  &gt;
-                </div>
-              </div>
-            </div>
-            <!-- maches  --> 
-            <div class="matches">
-              <div class="time">
-                69:34
-              </div>
-              <div class="club-logo">
-                <div class="logo-home">
-                    <img src="./assets/barcelona.png" alt="">
-                  </div> 
-                  <div class="logo-away">
-                    <img src="./assets/realmadrid.png" alt="">
-                </div>
-              </div>
-              <div class="club-name">
-                    <div class="home-name">
-                      Manchester United
-                    </div>
-                    <div class="away-name">
-                      Manchester United
-                    </div>
-              </div>
-              <div class="score">
-                <span class="home">5</span>
-                <span class="away">0</span>
-              </div>
-              <div class="fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-            <!-- 2nd -->
-            <div class="matches">
-              <div class="time">
-                69:34
-              </div>
-              <div class="club-logo">
-                <div class="logo-home">
-                    <img src="./assets/barcelona.png" alt="">
-                  </div> 
-                  <div class="logo-away">
-                    <img src="./assets/realmadrid.png" alt="">
-                </div>
-              </div>
-              <div class="club-name">
-                    <div class="home-name">
-                      Manchester United
-                    </div>
-                    <div class="away-name">
-                      Manchester United
-                    </div>
-              </div>
-              <div class="score">
-                <span class="home">5</span>
-                <span class="away">0</span>
-              </div>
-              <div class="fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-            <!-- 3rd -->
-            <div class="matches">
-              <div class="time">
-                HT
-              </div>
-              <div class="club-logo">
-                <div class="logo-home">
-                    <img src="./assets/barcelona.png" alt="">
-                  </div> 
-                  <div class="logo-away">
-                    <img src="./assets/realmadrid.png" alt="">
-                </div>
-              </div>
-              <div class="club-name">
-                    <div class="home-name">
-                      Manchester United
-                    </div>
-                    <div class="away-name">
-                      Manchester United
-                    </div>
-              </div>
-              <div class="score">
-                <span class="home">5</span>
-                <span class="away">0</span>
-              </div>
-              <div class="fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-            <!-- 4th -->
-            <div class="matches">
-              <div class="time">
-                69:34
-              </div>
-              <div class="club-logo">
-                <div class="logo-home">
-                    <img src="./assets/barcelona.png" alt="">
-                  </div> 
-                  <div class="logo-away">
-                    <img src="./assets/realmadrid.png" alt="">
-                </div>
-              </div>
-              <div class="club-name">
-                    <div class="home-name">
-                      Manchester United
-                    </div>
-                    <div class="away-name">
-                      Manchester United
-                    </div>
-              </div>
-              <div class="score">
-                <span class="home">5</span>
-                <span class="away">0</span>
-              </div>
-              <div class="fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-            <!-- 5th -->
-            <div class="matches">
-              <div class="time">
-                69:34
-              </div>
-              <div class="club-logo">
-                <div class="logo-home">
-                    <img src="./assets/barcelona.png" alt="">
-                  </div> 
-                  <div class="logo-away">
-                    <img src="./assets/realmadrid.png" alt="">
-                </div>
-              </div>
-              <div class="club-name">
-                    <div class="home-name">
-                      Manchester United
-                    </div>
-                    <div class="away-name">
-                      Manchester United
-                    </div>
-              </div>
-              <div class="score">
-                <span class="home">5</span>
-                <span class="away">0</span>
-              </div>
-              <div class="fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-            <!-- 6th  -->
-            <div class="matches">
-              <div class="time">
-                69:34
-              </div>
-              <div class="club-logo">
-                <div class="logo-home">
-                    <img src="./assets/barcelona.png" alt="">
-                  </div> 
-                  <div class="logo-away">
-                    <img src="./assets/realmadrid.png" alt="">
-                </div>
-              </div>
-              <div class="club-name">
-                    <div class="home-name">
-                      Barcelona
-                    </div>
-                    <div class="away-name">
-                      Real Madrid
-                    </div>
-              </div>
-              <div class="score">
-                <span class="home">5</span>
-                <span class="away">0</span>
-              </div>
-              <div class="fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
          
-          
-          </div>
+          <!-- nigeria  -->
+          <nigeria>
+
+          </nigeria>
+        </div>
           <!-- footer  -->
+          
           <div class="footer">
             <div class="contain">
               <div class="first">
@@ -480,11 +108,15 @@
                   <span>Bet</span>
                 </div>
               </div>
-            </div>
-      </div>
+          </div>
+        </div>
     </div>  
 </template>
 <script setup>
+import England from "./components/England.vue";
+import Nigeria from "./components/Nigeria.vue";
+import Spain from "./components/Spain.vue";
+import Footer from "./components/Footer.vue"
 
        function openNav(){
         document.getElementById("mySidenav").style.width = "250px";
@@ -598,12 +230,13 @@
          .body-top{
           margin-top: 10px;
           display: flex;
+          font-size: small;
           /* justify-content: space-around; */
           overflow-x: scroll;
          }
          .body-top a{
           text-decoration: none;
-          padding: 10px;
+          padding: 5px 10px;
           background-color: #fff;
           border-radius: 20px;
           color: #818181;
@@ -664,7 +297,7 @@
          }
          .country-name>:first-child{
           font-weight: bolder;
-          font-size: large;
+          font-size: medium;
           margin-top: -5px;
          }
          /* matches  */
@@ -753,13 +386,14 @@
           align-items: center;
          }
          .ls-bet-down{
-          font-size: x-small;
+          font-size: xx-small;
           display: flex;
           flex-direction: column;
           justify-content: center;
           padding: 5px;
           background-color: #ff5722;
           border-radius: 5px;
+          height: 30px;
          }
         }
        </style>
