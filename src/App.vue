@@ -86,10 +86,46 @@
             <a href="">Cricket</a>
             <a href="">Race</a>
          </div>
+         <!-- main body  -->
 <br>     <div class="main-body">
             <div class="left">
+              <div class="search-area">
+                <div class="search-field">
+                  <i class="bi bi-search"></i>
+                  <input type="text" placeholder="Search....">
+                </div>
+              </div>
 
-              i am left
+              <div class="main-content">
+                <div class="content-detail">
+
+                  <div class="region-part">
+                    <div class="region-main">
+                    <a href="#">REGION</a>
+                    <span>&gt;</span>
+                  </div>
+                  <region></region>
+                  </div>
+
+                  <!-- team  -->
+                  <div class="region-part">
+                    <div class="region-main">
+                    <a href="#">TEAMS</a>
+                    <span>&gt;</span>
+                  </div>
+                  <region></region>
+                  </div>
+                  <!-- competition  -->
+                  <div class="region-part">
+                    <div class="region-main">
+                    <a href="#">Competition</a>
+                    <span>&gt;</span>
+                  </div>
+                  <region></region>
+                  </div>
+                </div>
+              </div>
+
             </div>
             <div class="center">
               <!-- center  -->
@@ -163,6 +199,8 @@ import Nigeria from "./components/Nigeria.vue";
 import Spain from "./components/Spain.vue";
 import Footer from "./components/Footer.vue"
 import Task from "./components/Task.vue"
+import Region from "./components/Region.vue";
+
        function openNav(){
         document.getElementById("mySidenav").style.width = "250px";
        }
@@ -297,13 +335,47 @@ import Task from "./components/Task.vue"
           display: flex;
           justify-content: space-between;
          }
+         .main-body>:first-child{
+          border: 1px solid #fff;
+          height: auto;
+          border-radius: 9px;
+          flex-grow: 0;
+         }
+         .bi-search{
+          
+         }
+         .search-area{
+          padding: 15px;
+          margin-bottom: 5px;
+         }
+         .search-area i{
+          margin-right: 5px;
+         }
+         .search-area input{
+          border: none;
+          margin-left: 5px;
+          padding: 6px;
+          background-color: #222831;
+         }
+         .main-content{
+          border-top: 1px solid #fff;
+         }
          .main-body>:nth-child(2){
-          flex-grow: 0.5;
+          flex-grow: 0.9;
           padding: 15px 5px;
           border-radius: 9px;
           border: 1px solid #fff;
          }
-         
+         /* region  */
+         .region-main{
+          margin: 25px 20px;
+          /* padding: 5px; */
+          display: flex;
+          justify-content: space-between;
+         }
+         .region-part{
+          margin-bottom: 10px;
+         }
          .ball-score>:first-child, .favourites>:first-child, .news>:first-child, .get-app>:first-child{
           margin-right: 10px;
           align-items: center;
@@ -315,7 +387,7 @@ import Task from "./components/Task.vue"
          }
          /* main top body  */
          .body-top{
-          margin-top: 10px;
+          margin-top: 30px;
           display: flex;
           font-size: medium;
           /* justify-content: space-around; */
@@ -440,12 +512,12 @@ import Task from "./components/Task.vue"
          }
          .home-name, .score .home{
           margin-bottom: 4px;
-          font-size: x-small;
+          font-size: medium;
 
          }
          .away-name, .score .away{
           margin-top: 6gpx;
-          font-size: x-small;
+          font-size: medium;
 
          }
          .matches>:last-child{
