@@ -312,6 +312,9 @@ import Footer from "./components/Footer.vue"
           border-left: 3px solid  #ff5722;
           margin-top: 5px;
          }
+         .time{
+          font-size: x-small;
+         }
          .matches .time{
           display: flex;
           width: 40px;
