@@ -292,19 +292,22 @@ import Task from "./components/Task.vue"
          .body-top{
           margin-top: 10px;
           display: flex;
-          font-size: small;
+          font-size: medium;
           /* justify-content: space-around; */
-          overflow-x: scroll;
+          /* overflow-x: scroll; */
          }
          .body-top a{
           text-decoration: none;
-          padding: 5px 10px;
-          background-color: #fff;
+          padding: 5px 20px;
+          background-color: #3a4042;
           border-radius: 20px;
           color: #818181;
           margin-left: 15px;
           width: auto;
           /* overflow: scroll; */
+         }
+         .body-top>:first-child{
+          background-color: #fff;
          }
          .bet-advert{
           color: #fff;
