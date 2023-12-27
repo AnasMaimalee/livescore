@@ -83,6 +83,8 @@
             <a href="">Hockey</a>
             <a href="">BasketBall</a>
             <a href="">Tennis</a>
+            <a href="">Cricket</a>
+            <a href="">Race</a>
          </div>
 <br>
           <!-- betadvert  -->
