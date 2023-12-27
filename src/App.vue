@@ -335,6 +335,9 @@ import Region from "./components/Region.vue";
           display: flex;
           justify-content: space-between;
          }
+         .main-body a:hover{
+          background-color: #1d2427;
+         }
          .main-body>:first-child{
           border: 1px solid #fff;
           height: auto;

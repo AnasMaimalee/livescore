@@ -1,39 +1,49 @@
 <template>
     
   <div class="region">
-    <div class="country-detail">
+    <a href="">
+        <div class="country-detail">
         <div class="country-flag">
              <img src="../assets/download.png" alt="">
              England
             </div>
     </div>
+    </a>
 
-    <div class="country-detail">
+    <a href="">
+        <div class="country-detail">
         <div class="country-flag">
             <img src="../assets/ball.png" alt="" class="rounded-ball">
            Champions League
         </div>
     </div>
-    <div class="country-detail">
+    </a>
+    <a href="">
+        <div class="country-detail">
         <div class="country-flag">
             <img src="../assets/spain.png" alt="">
             Spain
         </div>
     </div>
+    </a>
     
-    <div class="country-detail">
+    <a href="">
+        <div class="country-detail">
         <div class="country-flag">
             <img src="../assets/italy.png" alt="">
             Italy
         </div>
     </div>
+    </a>
     
-    <div class="country-detail">
+    <a href="">
+        <div class="country-detail">
         <div class="country-flag">
             <img src="../assets/germany.png" alt="">
             Germany
         </div>
     </div>
+    </a>
   </div>
 </template>
 
@@ -62,5 +72,8 @@
     }
     .rounded-ball{
         border-radius: 50%;
+    }
+    .country-detail:hover{
+        background-color: #1d2427;
     }
 </style>
