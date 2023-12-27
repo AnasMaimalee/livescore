@@ -198,12 +198,13 @@
     </template>
     
     
-    <script setup>
+<script setup>
 import { ref } from "vue";
+const engladLeague = ref("Endland League")
+const premier = ref("Premier")
 
-    const engladLeague = ref("Endland League")
-    const premier = ref("Premier")
-    </script>
+
+</script>
     
     <style>
     

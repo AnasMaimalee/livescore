@@ -1,5 +1,37 @@
 <template>
   <div class="section">
+        <!-- computer -->
+        <div class="laptop-header">
+          <span @click="openNav" class="sidebtn">
+            <div class="i-line">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </span>
+          <span class="livescore">LiveScore</span>
+          <div class="ball-score">
+            <img src="./assets/ball.png" alt="">
+            <span>Scores</span>
+          </div>
+          <div class="favourites">
+            <i class="bi bi-heart"></i>
+            <span>Favourites</span>
+          </div>
+          <div class="news">
+            <i class="bi bi-newspaper"></i>
+            <span>News</span>
+          </div>
+          <div class="get-app">
+            <i class="bi bi-arrow-down-circle"></i>
+            <span>Get the app</span>
+          </div>
+          <div class="slash">|</div>
+          <div class="livescore-bet">
+            LiveScore <span>Bet</span>
+          </div>
+        </div>
+        <!-- mobile  -->
         <div class="header">
           <span @click="openNav" class="sidebtn">
             <div class="i-line">
@@ -51,9 +83,6 @@
             <a href="">Hockey</a>
             <a href="">BasketBall</a>
             <a href="">Tennis</a>
-            <a href="">Cricket</a>
-            <a href="">Formula1</a>
-            <a href="">Race</a>
          </div>
 <br>
           <!-- betadvert  -->
@@ -86,6 +115,8 @@
 
           </nigeria>
         </div>
+
+        <task></task>
           <!-- footer  -->
           
           <div class="footer">
@@ -117,7 +148,7 @@ import England from "./components/England.vue";
 import Nigeria from "./components/Nigeria.vue";
 import Spain from "./components/Spain.vue";
 import Footer from "./components/Footer.vue"
-
+import Task from "./components/Task.vue"
        function openNav(){
         document.getElementById("mySidenav").style.width = "250px";
        }
@@ -133,17 +164,17 @@ import Footer from "./components/Footer.vue"
        }
     </script>
 <style>
-@media screen and (max-width:370px) {
           body{
             background-color: #222831;
             color: #fff;
+            margin: 30px 200px;
           }
           a{
             text-decoration: none;
             color: white;
           }
           .section{
-            margin-bottom: 70px;
+            /* margin-bottom:50p 40x; */
             flex: 1;
           }
           .header{
@@ -159,10 +190,15 @@ import Footer from "./components/Footer.vue"
            margin-top: 2;
 
           }
+         
+         
           .header>:last-child{
             border:none;margin-top: 4px;margin-right: 7px;
             /* background-color: black; */
           }
+         .header{
+          display: none;
+         }
           .sidebtn{
             margin-top: 6px;
             margin-left: 10px;
@@ -223,8 +259,32 @@ import Footer from "./components/Footer.vue"
             transition: 0.5s;
             padding-top: 60px;
          }
-         .search-top{
+         /* laptop header  */
+         .laptop-header{
+          font-size: 1.5em;
+          margin-top: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+         }
+         .laptop-header>:nth-child(2){
+          flex-grow:0.1 ;
+          margin-left: 0px;
+         }
+         .laptop-header>:last-child{
+          margin-right: 10px;
+         }
+         .laptop-header .livescore{
+          font-size: xx-large;
+          
+         }
+         .ball-score>:first-child, .favourites>:first-child, .news>:first-child, .get-app>:first-child{
+          margin-right: 10px;
+         }
          
+         .ball-score img{
+          border-radius: 50%;
+          width: 20px;
          }
          /* main top body  */
          .body-top{
@@ -359,9 +419,7 @@ import Footer from "./components/Footer.vue"
           margin-right: 10px;
          }
          .footer{
-          /* display: flex;
-          justify-content: space-between;
-          align-items: center; */
+          display: none;
           background-color: #212121;
           position: fixed;
           bottom: 0;
@@ -398,5 +456,21 @@ import Footer from "./components/Footer.vue"
           border-radius: 5px;
           height: 30px;
          }
-        }
+
+        @media screen and (max-width:370px) {
+          body{
+            margin: 0;
+            padding: 0;
+          }
+          .footer{
+            display: block;
+          }
+          .header{
+            display: flex;
+          }
+          .laptop-header{
+            display: none;
+          }
+         
+      }
        </style>
