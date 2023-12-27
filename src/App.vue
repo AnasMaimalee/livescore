@@ -86,7 +86,13 @@
             <a href="">Cricket</a>
             <a href="">Race</a>
          </div>
-<br>
+<br>     <div class="main-body">
+            <div class="left">
+
+              i am left
+            </div>
+            <div class="center">
+              <!-- center  -->
           <!-- betadvert  -->
           <div class="bet-advert">
             <div class="ls-bet">
@@ -118,6 +124,12 @@
           </nigeria>
         </div>
 
+            </div>
+            <div class="right">
+              ia ma right
+            </div>
+         </div> 
+         
         <task></task>
           <!-- footer  -->
           
@@ -280,8 +292,21 @@ import Task from "./components/Task.vue"
           font-size: xx-large;
           
          }
+         /* main body  */
+         .main-body{
+          display: flex;
+          justify-content: space-between;
+         }
+         .main-body>:nth-child(2){
+          flex-grow: 0.5;
+          padding: 15px 5px;
+          border-radius: 9px;
+          border: 1px solid #fff;
+         }
+         
          .ball-score>:first-child, .favourites>:first-child, .news>:first-child, .get-app>:first-child{
           margin-right: 10px;
+          align-items: center;
          }
          
          .ball-score img{
@@ -376,6 +401,9 @@ import Task from "./components/Task.vue"
           border-radius: 5px;
           border-left: 3px solid  #ff5722;
           margin-top: 5px;
+         }
+         .matches:hover{
+          background-color: #1d2427;
          }
          .time{
           font-size: x-small;
@@ -474,6 +502,17 @@ import Task from "./components/Task.vue"
             display: flex;
           }
           .laptop-header{
+            display: none;
+          }
+          .main-body>:nth-child(2){
+            padding: 0px 0px;
+            border: none;
+            width: 100%;
+          }
+          .main-body>:first-child{
+            display: none;
+          }
+          .main-body>:last-child{
             display: none;
           }
          
