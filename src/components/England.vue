@@ -5,10 +5,10 @@
                   <div class="country-detail">
                     <div class="img-logo">
                       <div class="country-info">
-                        <img src="../assets/spain.png" alt="">
+                        <img src="../assets/download.png" alt="">
                         <div class="country-name">
-                          <span>Nigeian Leaque</span>
-                           <span>NPL</span>
+                          <span>{{ engladLeague }}</span>
+                           <span>{{premier}}</span>
                         </div>
                       </div>
                     </div>
@@ -199,7 +199,10 @@
     
     
     <script setup>
-    
+import { ref } from "vue";
+
+    const engladLeague = ref("Endland League")
+    const premier = ref("Premier")
     </script>
     
     <style>

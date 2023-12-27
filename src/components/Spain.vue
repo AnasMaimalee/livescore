@@ -7,8 +7,8 @@
                       <div class="country-info">
                         <img src="../assets/spain.png" alt="">
                         <div class="country-name">
-                          <span>Nigeian Leaque</span>
-                           <span>NPL</span>
+                          <span>{{SpainLeaque}}</span>
+                           <span>{{laliga}}</span>
                         </div>
                       </div>
                     </div>
@@ -199,7 +199,10 @@
     
     
     <script setup>
-    
+import { ref } from "vue";
+
+    const laliga = ref("Laliga")
+    const SpainLeaque = ref("Spain League")
     </script>
     
     <style>

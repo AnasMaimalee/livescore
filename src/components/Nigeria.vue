@@ -5,10 +5,10 @@
               <div class="country-detail">
                 <div class="img-logo">
                   <div class="country-info">
-                    <img src="../assets/spain.png" alt="">
+                    <img src="../assets/nigeria.png" alt="">
                     <div class="country-name">
-                      <span>Nigeian Leaque</span>
-                       <span>NPL</span>
+                      <span>{{ league }}</span>
+                       <span>{{nigeria}}</span>
                     </div>
                   </div>
                 </div>
@@ -53,10 +53,10 @@
               </div>
               <div class="club-logo">
                 <div class="logo-home">
-                    <img src="../assets/barcelona.png" alt="">
+                    <img src="../assets/manchester.png" alt="">
                   </div> 
                   <div class="logo-away">
-                    <img src="../assets/realmadrid.png" alt="">
+                    <img src="../assets/astonvilla.jpeg" alt="">
                 </div>
               </div>
               <div class="club-name">
@@ -64,12 +64,12 @@
                       Manchester United
                     </div>
                     <div class="away-name">
-                      Manchester United
+                      Aston Villa
                     </div>
               </div>
               <div class="score">
                 <span class="home">5</span>
-                <span class="away">0</span>
+                <span class="away">3</span>
               </div>
               <div class="fav">
                 <i class="bi bi-heart"></i>
@@ -199,7 +199,10 @@
 
 
 <script setup>
+import { ref } from "vue";
 
+const league = ref("Nigeria League")
+const nigeria = ref("NPFL")
 </script>
 
 <style>
