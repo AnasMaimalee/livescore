@@ -20,7 +20,7 @@
             <!-- maches  --> 
             <div class="matches">
               <div class="time">
-                69:34
+                69
               </div>
               <div class="club-logo">
                 <div class="logo-home">
@@ -49,7 +49,7 @@
             <!-- 2nd -->
             <div class="matches">
               <div class="time">
-                69:34
+                78
               </div>
               <div class="club-logo">
                 <div class="logo-home">
@@ -107,7 +107,7 @@
             <!-- 4th -->
             <div class="matches">
               <div class="time">
-                69:34
+                34
               </div>
               <div class="club-logo">
                 <div class="logo-home">
@@ -136,7 +136,7 @@
             <!-- 5th -->
             <div class="matches">
               <div class="time">
-                69:34
+                64
               </div>
               <div class="club-logo">
                 <div class="logo-home">
@@ -165,7 +165,7 @@
             <!-- 6th  -->
             <div class="matches">
               <div class="time">
-                69:34
+                90 + 4
               </div>
               <div class="club-logo">
                 <div class="logo-home">

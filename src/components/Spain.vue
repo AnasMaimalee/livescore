@@ -20,7 +20,7 @@
                 <!-- maches  --> 
                 <div class="matches">
                   <div class="time">
-                    69:34
+                    69
                   </div>
                   <div class="club-logo">
                     <div class="logo-home">
@@ -39,7 +39,7 @@
                         </div>
                   </div>
                   <div class="score">
-                    <span class="home">5</span>
+                    <span class="home">1</span>
                     <span class="away">0</span>
                   </div>
                   <div class="fav">
@@ -49,7 +49,7 @@
                 <!-- 2nd -->
                 <div class="matches">
                   <div class="time">
-                    69:34
+                    60
                   </div>
                   <div class="club-logo">
                     <div class="logo-home">
@@ -68,7 +68,7 @@
                         </div>
                   </div>
                   <div class="score">
-                    <span class="home">5</span>
+                    <span class="home">2</span>
                     <span class="away">0</span>
                   </div>
                   <div class="fav">
@@ -78,7 +78,7 @@
                 <!-- 3rd -->
                 <div class="matches">
                   <div class="time">
-                    HT
+                    10
                   </div>
                   <div class="club-logo">
                     <div class="logo-home">
@@ -97,7 +97,7 @@
                         </div>
                   </div>
                   <div class="score">
-                    <span class="home">5</span>
+                    <span class="home">1</span>
                     <span class="away">0</span>
                   </div>
                   <div class="fav">
@@ -107,7 +107,7 @@
                 <!-- 4th -->
                 <div class="matches">
                   <div class="time">
-                    69:34
+                    43
                   </div>
                   <div class="club-logo">
                     <div class="logo-home">
@@ -126,7 +126,7 @@
                         </div>
                   </div>
                   <div class="score">
-                    <span class="home">5</span>
+                    <span class="home">0</span>
                     <span class="away">0</span>
                   </div>
                   <div class="fav">
@@ -136,7 +136,7 @@
                 <!-- 5th -->
                 <div class="matches">
                   <div class="time">
-                    69:34
+                    89
                   </div>
                   <div class="club-logo">
                     <div class="logo-home">
@@ -155,7 +155,7 @@
                         </div>
                   </div>
                   <div class="score">
-                    <span class="home">5</span>
+                    <span class="home">1</span>
                     <span class="away">0</span>
                   </div>
                   <div class="fav">
@@ -165,7 +165,7 @@
                 <!-- 6th  -->
                 <div class="matches">
                   <div class="time">
-                    69:34
+                    6
                   </div>
                   <div class="club-logo">
                     <div class="logo-home">
@@ -185,7 +185,7 @@
                   </div>
                   <div class="score">
                     <span class="home">5</span>
-                    <span class="away">0</span>
+                    <span class="away">1</span>
                   </div>
                   <div class="fav">
                     <i class="bi bi-heart"></i>
