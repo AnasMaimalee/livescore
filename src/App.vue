@@ -336,7 +336,7 @@ import Region from "./components/Region.vue";
           justify-content: space-between;
          }
          .main-body a:hover{
-          background-color: #1d2427;
+          background-color: red;
          }
          .main-body>:first-child{
           border: 1px solid #fff;
@@ -405,6 +405,9 @@ import Region from "./components/Region.vue";
           margin-left: 15px;
           width: auto;
           /* overflow: scroll; */
+         }
+         .body-top a:hover{
+          background-color: #1d2427;
          }
          .body-top>:first-child{
           background-color: #fff;
