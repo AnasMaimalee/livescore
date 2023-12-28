@@ -146,5 +146,9 @@ console.log(leagues)
   display: flex;
   justify-content: space-between;
 }
-
+@media screen and (max-width:370px){
+  .main-page{
+    width: 100%;
+  }
+}
 </style>
