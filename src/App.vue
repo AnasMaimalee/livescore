@@ -100,7 +100,7 @@
           body{
             background-color: #222831;
             color: #fff;
-            margin: 30px 200px;
+            margin: 30px 60px;
           }
           a{
             text-decoration: none;
