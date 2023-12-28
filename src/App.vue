@@ -9,7 +9,7 @@
               <div class="line"></div>
             </div>
           </span>
-          <span class="livescore">LiveScore</span>
+          <span class="livescore"><router-link :to="{name:'home'}">LiveScore</router-link></span>
           <div class="ball-score">
             <img src="./assets/ball.png" alt="">
             <span>Scores</span>

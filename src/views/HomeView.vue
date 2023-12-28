@@ -1,7 +1,7 @@
 <template>
  <!-- body  -->
  <div class="body-top">
-            <a href="">Football</a>
+            <router-link :to="{name:'home'}">Football</router-link>
             <a href="">Hockey</a>
             <a href="">BasketBall</a>
             <a href="">Tennis</a>

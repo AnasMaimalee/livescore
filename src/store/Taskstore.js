@@ -13,5 +13,9 @@ export const useTaskStore = defineStore('taskStore',{
         bundesliga:[],
         serieA:[],
         ligue1:[],
-    })
+    }),
+
+    getters:{
+        allLeagues:(state) => state.leagues
+    }
 })
