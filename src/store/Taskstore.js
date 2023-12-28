@@ -3,8 +3,15 @@ import { defineStore } from 'pinia'
 export const useTaskStore = defineStore('taskStore',{
     state: () =>({
         country: [
-            {id :1, name: 'Nigeria'}
+            {id :1, name: 'kano'}
         ],
-        name: "hassan"
+        leagues:[
+            'premier', 'bundesliga','serieA','ligue1',
+        ],
+        name: "hassan",
+        premier:[],
+        bundesliga:[],
+        serieA:[],
+        ligue1:[],
     })
 })
