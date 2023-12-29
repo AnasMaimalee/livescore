@@ -268,6 +268,7 @@ const saveLeagueBtn = () =>{
   .league>:last-child, .add-league-body>:nth-child(2){
     width: 50%;
     padding: 0px;
+    font-size: x-small;
   }
   .league>:first-child, .add-league-body>:first-child{
     font-size: medium;
