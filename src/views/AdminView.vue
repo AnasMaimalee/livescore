@@ -222,7 +222,7 @@ const saveLeagueBtn = () =>{
   justify-content: space-between;
 }
 .label{
-  flex-basis: 20%;
+  flex-basis: 30%;
   text-align: end;
   margin-right: 20px;
 }
