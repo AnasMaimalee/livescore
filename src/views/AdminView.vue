@@ -1,4 +1,6 @@
 <template>
+  <div class="content">
+    <!-- left  -->
     <div class="main-page">
       <div class="top-body">
         <span class="add">Add New Match</span>
@@ -13,7 +15,7 @@
         <form @submit.prevent="preventDefault">
         <div class="add-match-body">
             <div class="league">
-              <label for="league">Select League</label>
+              <label for="league" class="label">Select League</label>
               <select class="" aria-label="Default select example" v-model="selectedLeague">
                 <option v-for="league in leagues" :key="league" :value="league">
                   {{league}}
@@ -22,35 +24,35 @@
             </div>
 
             <div class="league">
-              <label for="league">Team/Home</label>
-              <select class="" aria-label="Default select example">
+              <label for="league" class="label">Team/Home</label>
+              <select class="" aria-label="Default select example" v-model="teamHome">
                 <option selected>Open this select menu</option>
                 <option value="1">One</option>
               </select>
             </div>
 
             <div class="league">
-              <label for="league">Team/Away</label>
-              <select class="" aria-label="Default select example">
+              <label for="league" class="label">Team/Away</label>
+              <select class="" aria-label="Default select example" v-model="teamAway">
                 <option selected>Open this select menu</option>
                 <option value="1">One</option>
               </select>
             </div>
 
             <div class="league">
-              <label for="league">Time</label>
-              <input type="datetime-local">
+              <label for="league" class="label">Time</label>
+              <input type="datetime-local" v-model="matchTime">
             </div>
 
             <div class="save">
-              <button class="save-btn" @click="save">Save</button>
+              <button class="save-btn" @click="saveMatch">Save</button>
               <span class="close" @click="show =! show">close</span>
             </div>
         </div>
       </form>
       </div>
       {{ selectedLeague }}
-<hr>
+  <hr>
       <div class="top-body">
         <span class="add">Add New League</span>
         <span class="plus"><i class="bi bi-plus" @click="showAddLeague =! showAddLeague"></i></span>
@@ -59,41 +61,140 @@
         <div v-if="showAddLeague">
           <form @submit.prevent="preventDefault">
           <div class="add-league-body">
-            <label for="league-title">Enter League Name</label>
-            <input type="text" v-model="leagueTitle">
+            <label for="league-title" class="label">Enter League Name</label>
+            <input type="text" v-model="newAddedLeague">
+          </div>
+          <div class="save">
+            <button class="save-btn" @click="saveLeagueBtn">Save</button>
           </div>
         </form>
+        {{ newAddedLeague }}
         </div>
     </div>
+
+    <!-- right  -->
+    <div class="main-page">
+      <div class="top-body">
+        <span class="add">Add New Club</span>
+        <div>
+          <span v-if="!show" class="plus" @click="show =! show"><i class="bi bi-plus"></i></span>
+          <span v-else class="plus" @click="show =! show"><i class="bi bi-dash-lg"></i></span>
+        </div>
+        </div>
+
+       <!-- add  match body  -->
+       <div v-if="show">
+        <form @submit.prevent="preventDefault">
+        <div class="add-match-body">
+            <div class="league">
+              <label for="league" class="label">Select League</label>
+              <select class="" aria-label="Default select example" v-model="selectedLeague">
+                <option v-for="league in leagues" :key="league" :value="league">
+                  {{league}}
+                </option>
+              </select>
+            </div>
+
+            <div class="league">
+              <label for="league" class="label">Team/Home</label>
+              <select class="" aria-label="Default select example" v-model="teamHome">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+              </select>
+            </div>
+
+            <div class="league">
+              <label for="league" class="label">Team/Away</label>
+              <select class="" aria-label="Default select example" v-model="teamAway">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+              </select>
+            </div>
+
+            <div class="league">
+              <label for="league" class="label">Time</label>
+              <input type="datetime-local" v-model="matchTime">
+            </div>
+
+            <div class="save">
+              <button class="save-btn" @click="saveMatch">Save</button>
+              <span class="close" @click="show =! show">close</span>
+            </div>
+        </div>
+      </form>
+      </div>
+      {{ selectedLeague }}
+  <hr>
+      <div class="top-body">
+        <span class="add">Add New League</span>
+        <span class="plus"><i class="bi bi-plus" @click="showAddLeague =! showAddLeague"></i></span>
+      </div>
+      <!-- add new league  -->
+        <div v-if="showAddLeague">
+          <form @submit.prevent="preventDefault">
+          <div class="add-league-body">
+            <label for="league-title" class="label">Enter League Name</label>
+            <input type="text" v-model="newAddedLeague">
+          </div>
+          <div class="save">
+            <button class="save-btn" @click="saveLeagueBtn">Save</button>
+          </div>
+        </form>
+        {{ newAddedLeague }}
+        </div>
+    </div>
+  </div>
+    
    
 </template>
 
 <script setup>
 import { useTaskStore } from "@/store/Taskstore";
 import { ref } from "vue";
+const task = useTaskStore()
 
-const showAddLeague = ref(false)
+const showAddLeague = ref(true)
 const preventDefault = () =>{
   console.log("Form Submission Preventef")
   return false
 }
+const matchTime = ref('')
 const selectedLeague = ref('')
+const teamAway = ref('')
+const teamHome = ref('')
 
-const save = () =>{
+
+const newAddedLeague = ref('')
+
+const saveMatch = () =>{
+  const object = {league: selectedLeague, teamAway: teamAway, teamHome: teamHome, matchTime: matchTime }
+  task.addMatche(object)
   selectedLeague.value = ''
 }
-const task = useTaskStore()
+
 const leagues = task.$state.leagues
 const show = ref(false)
 console.log(leagues)
+
+const saveLeagueBtn = () =>{
+  task.addLeagues(newAddedLeague.value)
+  newAddedLeague.value = ''
+}
+
+
 
 </script>
 
 <style>
 /* main page  */
+.content{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
 .main-page{
   width: 50%;
-  margin-top: 30px;
+  margin: 10px 30px;
   padding: 20px;
   border: 1px solid #fff;
   border-radius: 8px;
@@ -119,6 +220,11 @@ console.log(leagues)
   margin-top: 8px;
   display: flex;
   justify-content: space-between;
+}
+.label{
+  flex-basis: 20%;
+  text-align: end;
+  margin-right: 20px;
 }
 .add-match-body>:first-child{
   margin-top: 20px;

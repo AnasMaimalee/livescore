@@ -8,6 +8,7 @@ export const useTaskStore = defineStore('taskStore',{
         leagues:[
             'premier', 'bundesliga','serieA','ligue1',
         ],
+        matches:[],
         name: "hassan",
         premier:[],
         bundesliga:[],
@@ -15,7 +16,21 @@ export const useTaskStore = defineStore('taskStore',{
         ligue1:[],
     }),
 
-    getters:{
-        allLeagues:(state) => state.leagues
+    actions:{
+        addMatche(payload){
+            console.log(this.matches)
+            this.matches.push(payload)
+            console.log("success")
+        },
+
+        addLeagues(payload){
+            const exist = this.leagues.includes(payload)
+            if(exist){
+                console.log("league already exist")
+            }
+            else {
+                this.leagues.push(payload) 
+            }
+        }
     }
 })
