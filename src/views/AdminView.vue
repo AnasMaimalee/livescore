@@ -153,6 +153,10 @@ console.log(leagues)
   }
   .league>:last-child, .add-league-body>:last-child{
     width: 50%;
+    padding: 1px;
+  }
+  .league>:first-child, .add-league-body>:first-child{
+    font-size: medium;
   }
 }
 </style>
