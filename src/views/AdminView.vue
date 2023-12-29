@@ -257,10 +257,11 @@ const saveLeagueBtn = () =>{
 }
 @media screen and (max-width:370px){
   .content{
-    margin: 10px 10px 10px 10px;
+    margin:0px;
     display: grid;
   }
   .main-page{
+    margin: 10px 20px;
     width: 100%;
     
   }
