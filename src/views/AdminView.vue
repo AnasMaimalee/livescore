@@ -1,4 +1,4 @@
-<template>
+<template>hh
   <div class="content">
     <!-- left  -->
     <div class="main-page">
@@ -269,6 +269,10 @@ const saveLeagueBtn = () =>{
     width: 45%;
     padding: 0px;
     font-size: x-small;
+  }
+  .label{
+    flex-basis: 40%;
+    font-size: medium;
   }
   .league>:first-child, .add-league-body>:first-child{
     font-size: medium;
