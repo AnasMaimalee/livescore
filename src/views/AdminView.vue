@@ -61,7 +61,7 @@
         <div v-if="showAddLeague">
           <form @submit.prevent="preventDefault">
           <div class="add-league-body">
-            <label for="league-title" class="label">Enter League Name</label>
+            <label for="league-title" class="label">Name</label>
             <input type="text" v-model="newAddedLeague">
           </div>
           <div class="save">
@@ -133,7 +133,7 @@
         <div v-if="showAddLeague">
           <form @submit.prevent="preventDefault">
           <div class="add-league-body">
-            <label for="league-title" class="label">Enter League Name</label>
+            <label for="league-title" class="label">Name</label>
             <input type="text" v-model="newAddedLeague">
           </div>
           <div class="save">
@@ -256,13 +256,17 @@ const saveLeagueBtn = () =>{
   justify-content: space-between;
 }
 @media screen and (max-width:370px){
+  .content{
+    margin: 10px 10px 10px 10px;
+    display: grid;
+  }
   .main-page{
     width: 100%;
     
   }
-  .league>:last-child, .add-league-body>:last-child{
+  .league>:last-child, .add-league-body>:nth-child(2){
     width: 50%;
-    padding: 1px;
+    padding: 0px;
   }
   .league>:first-child, .add-league-body>:first-child{
     font-size: medium;
