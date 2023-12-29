@@ -139,3 +139,8 @@ function openNav(){
        }
 
 </script>
+<style>
+.left{
+  height: auto;
+}
+</style>

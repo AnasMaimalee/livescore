@@ -149,6 +149,10 @@ console.log(leagues)
 @media screen and (max-width:370px){
   .main-page{
     width: 100%;
+    
+  }
+  .league>:last-child, .add-league-body>:last-child{
+    width: 50%;
   }
 }
 </style>
