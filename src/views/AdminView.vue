@@ -2,8 +2,11 @@
     <div class="main-page">
       <div class="top-body">
         <span class="add">Add New Match</span>
-        <span class="plus"><i class="bi bi-plus" @click="show =! show"></i></span>
-      </div>
+        <div>
+          <span v-if="!show" class="plus" @click="show =! show"><i class="bi bi-plus"></i></span>
+          <span v-else class="plus" @click="show =! show"><i class="bi bi-dash-lg"></i></span>
+        </div>
+        </div>
 
        <!-- add  match body  -->
        <div v-if="show">
