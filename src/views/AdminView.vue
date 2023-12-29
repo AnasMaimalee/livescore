@@ -261,12 +261,12 @@ const saveLeagueBtn = () =>{
     display: grid;
   }
   .main-page{
-    margin: 10px 20px;
+  
     width: 100%;
     
   }
   .league>:last-child, .add-league-body>:nth-child(2){
-    width: 50%;
+    width: 45%;
     padding: 0px;
     font-size: x-small;
   }
