@@ -19,9 +19,9 @@ export const useTaskStore = defineStore('taskStore',{
 
     actions:{
         addMatche(payload){
-            console.log(this.matches)
+            // console.log(this.matches)
             this.matches.push(payload)
-            console.log("success")
+            // console.log("success")
         },
 
         addLeagues(payload){
@@ -32,6 +32,15 @@ export const useTaskStore = defineStore('taskStore',{
             else {
                 this.leagues.push(payload) 
             }
+        },
+        addClub(payload){
+            // console.log("hello")
+            this.clubs.push(payload)
+            console.log(this.clubs)
+        },
+
+        addClubLogo(payload){
+            console.log("maimalee")
         }
     }
 })

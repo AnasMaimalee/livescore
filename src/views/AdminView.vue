@@ -26,16 +26,18 @@
             <div class="league">
               <label for="league" class="label">Team/Home</label>
               <select class="" aria-label="Default select example" v-model="teamHome">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
+                <option v-for="club in clubs" :key="club" selected :value="club.clubName">
+                  {{ club.clubName }}
+                </option>
               </select>
             </div>
 
             <div class="league">
               <label for="league" class="label">Team/Away</label>
               <select class="" aria-label="Default select example" v-model="teamAway">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
+                <option v-for="club in clubs" :key="club" selected :value="club.clubName">
+                  {{ club.clubName }}
+                </option>
               </select>
             </div>
 
@@ -91,7 +93,7 @@
         <div class="add-club-body">
             <div class="league">
               <label for="league" class="label">Select League</label>
-              <select class="" aria-label="Default select example" v-model="selectedLeague">
+              <select class="" aria-label="Default select example" v-model="clubLeague">
                 <option v-for="league in leagues" :key="league" :value="league">
                   {{league}}
                 </option>
@@ -103,10 +105,10 @@
             </div>
             <div class="league">
               <label for="logo" class="label">Logo *img</label>
-              <input type="file" v-on="logo">
+              <input type="file" @change="handleFIleChange">
             </div>
             <div class="save">
-              <button class="save-btn" >Save</button>
+              <button class="save-btn" @click="saveclub">Save</button>
               <span class="close">close</span>
             </div>
         </div>
@@ -114,9 +116,17 @@
       </div>
     
     </div>
+    ff
+    <div v-for="club in clubs" :key="club.clubName">
+      {{ club.clubName }}
+   </div>
+   <div v-for="matche in magtches" :key="matche">
+    {{  matche.league}}
+    {{ matche.teamAway }} {{ matche.teamHome }} {{ matche.matchTime }}
   </div>
-    
-   
+  </div>
+    3w
+  
 </template>
 
 <script setup>
@@ -135,17 +145,42 @@ const selectedLeague = ref('')
 const teamAway = ref('')
 const teamHome = ref('')
 
-
-const newAddedLeague = ref('')
-
 const saveMatch = () =>{
-  const object = {league: selectedLeague, teamAway: teamAway, teamHome: teamHome, matchTime: matchTime }
+  console.log("teamAway")
+  console.log(teamAway)
+  const object = {league: selectedLeague.value, teamAway: teamAway.value, teamHome: teamHome.value, matchTime: matchTime.value }
   task.addMatche(object)
   selectedLeague.value = ''
+  matchTime.addClub = null
 }
 
+const clubLeague = ref('')
+const clubName = ref('')
+const clubLogo = ref('')
+const newAddedLeague = ref('')
+
+const handleFIleChange = (event) =>{
+  const selectedFile = event.target.files[0]
+  clubLogo.value = selectedFile
+}
+const saveclub = () =>{
+  const object = {league: clubLeague.value, clubName: clubName.value, clubLogo: clubLogo.value}
+  task.addClub(object)
+  clubLeague.value = ''
+  clubName.value = ''
+  clubLogo.value = null
+
+  task.addClubLogo(clubLogo.value)
+}
+
+
+const clubs = task.$state.clubs
+console.log(clubs)
+const matches = task.$state.matches
+console.log(matches)
+
 const leagues = task.$state.leagues
-console.log(leagues)
+// console.log(leagues)
 
 const saveLeagueBtn = () =>{
   task.addLeagues(newAddedLeague.value)
