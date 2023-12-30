@@ -9,6 +9,7 @@ export const useTaskStore = defineStore('taskStore',{
             'premier', 'bundesliga','serieA','ligue1',
         ],
         matches:[],
+        clubs:[],
         name: "hassan",
         premier:[],
         bundesliga:[],

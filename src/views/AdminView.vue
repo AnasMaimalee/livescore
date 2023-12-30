@@ -2,7 +2,7 @@
   <div class="content">
     <!-- left  -->
     <div class="main-page">
-      <div class="top-body">
+      <div class="top-left">
         <span class="add">Add New Match</span>
         <div>
           <span v-if="!show" class="plus" @click="show =! show"><i class="bi bi-plus"></i></span>
@@ -55,7 +55,10 @@
   <hr>
       <div class="top-body">
         <span class="add">Add New League</span>
-        <span class="plus"><i class="bi bi-plus" @click="showAddLeague =! showAddLeague"></i></span>
+        <div>
+          <span v-if="!showAddLeague" class="plus"><i class="bi bi-plus" @click="showAddLeague =! showAddLeague"></i></span>
+          <span v-else class="plus"><i class="bi bi-dash-lg" @click="showAddLeague =! showAddLeague"></i></span>
+        </div>
       </div>
       <!-- add new league  -->
         <div v-if="showAddLeague">
@@ -74,18 +77,18 @@
 
     <!-- right  -->
     <div class="main-page">
-      <div class="top-body">
+      <div class="top-right">
         <span class="add">Add New Club</span>
         <div>
-          <span v-if="!show" class="plus" @click="show =! show"><i class="bi bi-plus"></i></span>
-          <span v-else class="plus" @click="show =! show"><i class="bi bi-dash-lg"></i></span>
+          <span v-if="!showAddClub" class="plus" @click="showAddClub =! showAddClub"><i class="bi bi-plus"></i></span>
+          <span v-else class="plus" @click="showAddClub =! showAddClub"><i class="bi bi-dash-lg"></i></span>
         </div>
         </div>
 
        <!-- add  match body  -->
-       <div v-if="show">
+       <div v-if="showAddClub">
         <form @submit.prevent="preventDefault">
-        <div class="add-match-body">
+        <div class="add-club-body">
             <div class="league">
               <label for="league" class="label">Select League</label>
               <select class="" aria-label="Default select example" v-model="selectedLeague">
@@ -94,54 +97,22 @@
                 </option>
               </select>
             </div>
-
             <div class="league">
-              <label for="league" class="label">Team/Home</label>
-              <select class="" aria-label="Default select example" v-model="teamHome">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-              </select>
+              <label for="club-name" class="label">Enter Name</label>
+              <input type="text" v-model="clubName">
             </div>
-
             <div class="league">
-              <label for="league" class="label">Team/Away</label>
-              <select class="" aria-label="Default select example" v-model="teamAway">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-              </select>
+              <label for="logo" class="label">Logo *img</label>
+              <input type="file" v-on="logo">
             </div>
-
-            <div class="league">
-              <label for="league" class="label">Time</label>
-              <input type="datetime-local" v-model="matchTime">
-            </div>
-
             <div class="save">
-              <button class="save-btn" @click="saveMatch">Save</button>
-              <span class="close" @click="show =! show">close</span>
+              <button class="save-btn" >Save</button>
+              <span class="close">close</span>
             </div>
         </div>
       </form>
       </div>
-      {{ selectedLeague }}
-  <hr>
-      <div class="top-body">
-        <span class="add">Add New League</span>
-        <span class="plus"><i class="bi bi-plus" @click="showAddLeague =! showAddLeague"></i></span>
-      </div>
-      <!-- add new league  -->
-        <div v-if="showAddLeague">
-          <form @submit.prevent="preventDefault">
-          <div class="add-league-body">
-            <label for="league-title" class="label">Name</label>
-            <input type="text" v-model="newAddedLeague">
-          </div>
-          <div class="save">
-            <button class="save-btn" @click="saveLeagueBtn">Save</button>
-          </div>
-        </form>
-        {{ newAddedLeague }}
-        </div>
+    
     </div>
   </div>
     
@@ -152,8 +123,9 @@
 import { useTaskStore } from "@/store/Taskstore";
 import { ref } from "vue";
 const task = useTaskStore()
-
-const showAddLeague = ref(true)
+const show = ref(false)
+const showAddClub = ref(false)
+const showAddLeague = ref(false)
 const preventDefault = () =>{
   console.log("Form Submission Preventef")
   return false
@@ -173,7 +145,6 @@ const saveMatch = () =>{
 }
 
 const leagues = task.$state.leagues
-const show = ref(false)
 console.log(leagues)
 
 const saveLeagueBtn = () =>{
@@ -188,7 +159,7 @@ const saveLeagueBtn = () =>{
 <style>
 /* main page  */
 .content{
-  display: flex;
+  display: grid-row;
   justify-content: space-between;
   margin: 10px;
 }
@@ -198,6 +169,15 @@ const saveLeagueBtn = () =>{
   padding: 20px;
   border: 1px solid #fff;
   border-radius: 8px;
+}
+.top-left{
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-right{
+  display: flex;
+  justify-content: space-between;
 }
 .top-body{
   display: flex;
@@ -215,6 +195,20 @@ const saveLeagueBtn = () =>{
   justify-content: space-between;
   align-content: center;
   font-size: 1.2em;
+}
+.add-club-body{
+  margin-top: 20px;
+  border-top: 1px solid #fff;
+  justify-content: space-between;
+  align-content: center;
+  font-size: 1.2em;
+}
+input[type="file"]{
+  border: none;
+  color: #fff;
+  width: 40px;
+  pad: 5px;
+  /* background: #fff; */
 }
 .league{
   margin-top: 8px;
@@ -262,7 +256,7 @@ const saveLeagueBtn = () =>{
   }
   .main-page{
   
-    width: 100%;
+    width: 80%;
     
   }
   .league>:last-child, .add-league-body>:nth-child(2){
