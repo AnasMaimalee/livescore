@@ -15,7 +15,7 @@
         <form @submit.prevent="preventDefault">
         <div class="add-match-body">
             <div class="league">
-              <label for="league" class="label">Select League</label>
+              <label for="league" class="label">League</label>
               <select class="" aria-label="Default select example" v-model="selectedLeague">
                 <option v-for="league in leagues" :key="league" :value="league">
                   {{league}}
@@ -24,7 +24,7 @@
             </div>
 
             <div class="league">
-              <label for="league" class="label">Team/Home</label>
+              <label for="league" class="label">Home</label>
               <select class="" aria-label="Default select example" v-model="teamHome">
                 <option v-for="club in clubs" :key="club" selected :value="club.clubName">
                   {{ club.clubName }}
@@ -33,7 +33,7 @@
             </div>
 
             <div class="league">
-              <label for="league" class="label">Team/Away</label>
+              <label for="league" class="label">Away</label>
               <select class="" aria-label="Default select example" v-model="teamAway">
                 <option v-for="club in clubs" :key="club" selected :value="club.clubName">
                   {{ club.clubName }}
@@ -291,11 +291,11 @@ input[type="file"]{
   }
   .main-page{
   
-    width: 80%;
+    width: 90%;
     
   }
   .league>:last-child, .add-league-body>:nth-child(2){
-    width: 45%;
+    width: 75%;
     padding: 0px;
     font-size: x-small;
   }
