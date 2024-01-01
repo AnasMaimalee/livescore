@@ -47,7 +47,7 @@
             </div>
 
             <div class="save">
-              <button class="save-btn" @click="saveMatch">Save</button>
+              <span class="save-btn" @click="saveMatch">Save</span>
               <span class="close" @click="show =! show">close</span>
             </div>
         </div>
@@ -92,7 +92,7 @@
         <form @submit.prevent="preventDefault">
         <div class="add-club-body">
             <div class="league">
-              <label for="league" class="label">Select League</label>
+              <label for="league" class="label">League</label>
               <select class="" aria-label="Default select example" v-model="clubLeague">
                 <option v-for="league in leagues" :key="league" :value="league">
                   {{league}}
@@ -100,7 +100,7 @@
               </select>
             </div>
             <div class="league">
-              <label for="club-name" class="label">Enter Name</label>
+              <label for="club-name" class="label">Name</label>
               <input type="text" v-model="clubName">
             </div>
             <div class="league">
@@ -108,7 +108,7 @@
               <input type="file" @change="handleFIleChange">
             </div>
             <div class="save">
-              <button class="save-btn" @click="saveclub">Save</button>
+              <span class="save-btn" @click="saveclub">Save</span>
               <span class="close">close</span>
             </div>
         </div>
@@ -133,7 +133,7 @@
 import { useTaskStore } from "@/store/Taskstore";
 import { ref } from "vue";
 const task = useTaskStore()
-const show = ref(false)
+const show = ref(true)
 const showAddClub = ref(false)
 const showAddLeague = ref(false)
 const preventDefault = () =>{
@@ -274,6 +274,9 @@ input[type="file"]{
   padding: 4px 10px;
   border-radius: 6px;
 }
+.save-btn{
+  color: #222831;
+}
 .close{
   color:red;
   margin-left:5px;
@@ -288,11 +291,10 @@ input[type="file"]{
   .content{
     margin:0px;
     display: grid;
+    /* width: 100%; */
   }
   .main-page{
-  
-    width: 90%;
-    
+    width: 100%;
   }
   .league>:last-child, .add-league-body>:nth-child(2){
     width: 75%;
@@ -305,6 +307,15 @@ input[type="file"]{
   }
   .league>:first-child, .add-league-body>:first-child{
     font-size: medium;
+  }
+  .save-btn, .close{
+    font-size: xx-small;
+  }
+  .close{
+    border: none;
+  }
+  .top-left{
+    /* width: 100%; */
   }
 }
 </style>
