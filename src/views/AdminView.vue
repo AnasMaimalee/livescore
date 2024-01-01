@@ -300,8 +300,8 @@ input[type="file"]{
     font-size: x-small;
   }
   .label{
-    flex-basis: 40%;
-    font-size: medium;
+    flex-basis: 50%;
+    font-size: xx-small;
   }
   .league>:first-child, .add-league-body>:first-child{
     font-size: medium;
