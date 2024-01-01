@@ -1,4 +1,4 @@
-<template>hh
+<template>
   <div class="content">
     <!-- left  -->
     <div class="main-page">
@@ -54,7 +54,9 @@
       </form>
       </div>
       {{ selectedLeague }}
-  <hr>
+    
+    </div>
+    <div class="main-page">
       <div class="top-body">
         <span class="add">Add New League</span>
         <div>
@@ -76,7 +78,6 @@
         {{ newAddedLeague }}
         </div>
     </div>
-
     <!-- right  -->
     <div class="main-page">
       <div class="top-right">
@@ -196,7 +197,7 @@ const saveLeagueBtn = () =>{
 .content{
   display: grid-row;
   justify-content: space-between;
-  margin: 10px;
+  /* margin: 10px; */
 }
 .main-page{
   width: 50%;
@@ -288,34 +289,10 @@ input[type="file"]{
   justify-content: space-between;
 }
 @media screen and (max-width:370px){
-  .content{
-    margin:0px;
-    display: grid;
-    /* width: 100%; */
-  }
   .main-page{
-    width: 100%;
+    width: 80%;
+    margin: 10px auto;
   }
-  .league>:last-child, .add-league-body>:nth-child(2){
-    width: 75%;
-    padding: 0px;
-    font-size: x-small;
-  }
-  .label{
-    flex-basis: 50%;
-    font-size: xx-small;
-  }
-  .league>:first-child, .add-league-body>:first-child{
-    font-size: medium;
-  }
-  .save-btn, .close{
-    font-size: xx-small;
-  }
-  .close{
-    border: none;
-  }
-  .top-left{
-    /* width: 100%; */
-  }
+  
 }
 </style>
