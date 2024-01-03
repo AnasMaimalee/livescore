@@ -113,6 +113,7 @@
               </div>
           </div>
         </div>
+        <liveve-match></liveve-match>
 </template>
 
 <script setup>
@@ -123,6 +124,7 @@ import Spain from "../components/Spain.vue";
 import Footer from "../components/Footer.vue"
 import Task from "../components/Task.vue"
 import Region from "../components/Region.vue";
+import liveveMatch from "../components/liveMatch.vue"
 
 function openNav(){
         document.getElementById("mySidenav").style.width = "250px";

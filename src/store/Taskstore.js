@@ -8,6 +8,7 @@ export const useTaskStore = defineStore('taskStore',{
         leagues:[
             'premier', 'bundesliga','serieA','ligue1',
         ],
+        memuna:"memuna",
         matches:[],
         clubs:[],
         name: "hassan",
@@ -15,32 +16,42 @@ export const useTaskStore = defineStore('taskStore',{
         bundesliga:[],
         serieA:[],
         ligue1:[],
+
+        
+        
     }),
+
+    getters:{   
+        getLiveMatches(state){
+            return state.matches
+        },
+        getMatchLenght(state){
+            return state.matches.length
+        }
+
+    },
 
     actions:{
         addMatche(payload){
-            // console.log(this.matches)
             this.matches.push(payload)
-            // console.log("success")
         },
 
         addLeagues(payload){
             const exist = this.leagues.includes(payload)
             if(exist){
-                console.log("league already exist")
+                // console.log("league already exist")
             }
             else {
                 this.leagues.push(payload) 
             }
         },
         addClub(payload){
-            // console.log("hello")
             this.clubs.push(payload)
-            console.log(this.clubs)
+            // console.log(this.clubs)
         },
 
         addClubLogo(payload){
-            console.log("maimalee")
+            // console.log("maimalee")
         }
     }
 })

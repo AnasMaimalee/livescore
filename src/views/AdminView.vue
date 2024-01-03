@@ -110,30 +110,61 @@
             </div>
             <div class="save">
               <span class="save-btn" @click="saveclub">Save</span>
-              <span class="close">close</span>
+              <span class="close" @click="showAddClub =! showAddClub">close</span>
             </div>
         </div>
       </form>
       </div>
-    
+        
     </div>
     ff
     <div v-for="club in clubs" :key="club.clubName">
       {{ club.clubName }}
    </div>
+   
+   <span class="material-symbols-outlined">delete</span>
+   <span class="material-symbols-outlined">favorite</span>
+   hi 
+   <i class="bi bi-heart"></i>
+   <i class="bi bi-trash"></i>
+
    <div v-for="matche in magtches" :key="matche">
     {{  matche.league}}
     {{ matche.teamAway }} {{ matche.teamHome }} {{ matche.matchTime }}
   </div>
   </div>
-    3w
-  
+    {{ payload }} {{ count}}
+  <button class="" @click="updatePayload()">Munari</button>
+  <button class="" @click="increment">Munari</button>
+{{ team }}
 </template>
 
 <script setup>
+import { useStore } from "@/store/store";
 import { useTaskStore } from "@/store/Taskstore";
-import { ref } from "vue";
+import { computed, ref } from "vue";
 const task = useTaskStore()
+const store = useStore()
+const matchLenght = task.getMatchLenght
+console.log(matchLenght)
+const kano = store.$state.kano
+
+const payload = computed(()=>store.$state.payload)
+const changeValue = ref("Hello World hhhhhh")
+const count = computed(() => store.count)
+const updatePayload = () =>{
+  store.changePayload(changeValue.value)
+  store.increment
+}
+const team = computed(() => store.team)
+const increment = () =>{
+  store.increment
+}
+
+
+const memuna = store.$state.payload
+
+
 const show = ref(true)
 const showAddClub = ref(false)
 const showAddLeague = ref(false)
@@ -147,9 +178,7 @@ const teamAway = ref('')
 const teamHome = ref('')
 
 const saveMatch = () =>{
-  console.log("teamAway")
-  console.log(teamAway)
-  const object = {league: selectedLeague.value, teamAway: teamAway.value, teamHome: teamHome.value, matchTime: matchTime.value }
+  const object = {id: matchLenght+1 ,league: selectedLeague.value, teamAway: teamAway.value, teamHome: teamHome.value, matchTime: matchTime.value }
   task.addMatche(object)
   selectedLeague.value = ''
   matchTime.addClub = null
@@ -165,6 +194,7 @@ const handleFIleChange = (event) =>{
   clubLogo.value = selectedFile
 }
 const saveclub = () =>{
+
   const object = {league: clubLeague.value, clubName: clubName.value, clubLogo: clubLogo.value}
   task.addClub(object)
   clubLeague.value = ''
@@ -176,20 +206,21 @@ const saveclub = () =>{
 
 
 const clubs = task.$state.clubs
-console.log(clubs)
+// console.log(clubs)
 const matches = task.$state.matches
-console.log(matches)
+// console.log(matches)
 
 const leagues = task.$state.leagues
 // console.log(leagues)
-
+const anas = ref("Anas Maimalee And Maimuna")
 const saveLeagueBtn = () =>{
   task.addLeagues(newAddedLeague.value)
   newAddedLeague.value = ''
 }
 
-
-
+const me = computed(()=>(`${anas.value} is my best friend`))
+// console.log(me.value)
+// console.log(anas.value)
 </script>
 
 <style>
@@ -199,6 +230,7 @@ const saveLeagueBtn = () =>{
   justify-content: space-between;
   /* margin: 10px; */
 }
+ 
 .main-page{
   width: 50%;
   margin: 10px 30px;

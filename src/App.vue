@@ -48,6 +48,7 @@
           <div class="sidenav" id="mySidenav">
             <div class="top-nav">
               <div class="left">
+                <router-link :to="{name:'Admin'}">Admin</router-link>
                 <a href="">Link 1</a>
                 <a href="">Link 1</a>
                 <a href="">Link 1</a>

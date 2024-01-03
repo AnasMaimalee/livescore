@@ -18,9 +18,12 @@
               </div>
             </div>
             <!-- maches  --> 
-            <div class="matches">
+
+            <div v-for="liveMatch in liveMatches" :key="liveMatch">
+
+            <div class="matches" >
               <div class="time">
-                69
+                {{ liveMatch.matchTime }}
               </div>
               <div class="club-logo">
                 <div class="logo-home">
@@ -32,177 +35,38 @@
               </div>
               <div class="club-name">
                     <div class="home-name">
-                      Manchester United
+                      {{ liveMatch.teamHome }} {{ liveMatch.id }}
                     </div>
                     <div class="away-name">
-                      Manchester United
+                      {{ liveMatch.teamAway }}
                     </div>
               </div>
               <div class="score">
                 <span class="home">5</span>
                 <span class="away">0</span>
               </div>
+             
               <div class="fav">
                 <i class="bi bi-heart"></i>
               </div>
             </div>
-            <!-- 2nd -->
-            <div class="matches">
-              <div class="time">
-                78
-              </div>
-              <div class="club-logo">
-                <div class="logo-home">
-                    <img src="../assets/manchester.png" alt="">
-                  </div> 
-                  <div class="logo-away">
-                    <img src="../assets/astonvilla.jpeg" alt="">
-                </div>
-              </div>
-              <div class="club-name">
-                    <div class="home-name">
-                      Manchester United
-                    </div>
-                    <div class="away-name">
-                      Aston Villa
-                    </div>
-              </div>
-              <div class="score">
-                <span class="home">5</span>
-                <span class="away">3</span>
-              </div>
-              <div class="fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-            <!-- 3rd -->
-            <div class="matches">
-              <div class="time">
-                HT
-              </div>
-              <div class="club-logo">
-                <div class="logo-home">
-                    <img src="../assets/barcelona.png" alt="">
-                  </div> 
-                  <div class="logo-away">
-                    <img src="../assets/realmadrid.png" alt="">
-                </div>
-              </div>
-              <div class="club-name">
-                    <div class="home-name">
-                      Manchester United
-                    </div>
-                    <div class="away-name">
-                      Manchester United
-                    </div>
-              </div>
-              <div class="score">
-                <span class="home">5</span>
-                <span class="away">0</span>
-              </div>
-              <div class="fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-            <!-- 4th -->
-            <div class="matches">
-              <div class="time">
-                34
-              </div>
-              <div class="club-logo">
-                <div class="logo-home">
-                    <img src="../assets/barcelona.png" alt="">
-                  </div> 
-                  <div class="logo-away">
-                    <img src="../assets/realmadrid.png" alt="">
-                </div>
-              </div>
-              <div class="club-name">
-                    <div class="home-name">
-                      Manchester United
-                    </div>
-                    <div class="away-name">
-                      Manchester United
-                    </div>
-              </div>
-              <div class="score">
-                <span class="home">5</span>
-                <span class="away">0</span>
-              </div>
-              <div class="fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-            <!-- 5th -->
-            <div class="matches">
-              <div class="time">
-                64
-              </div>
-              <div class="club-logo">
-                <div class="logo-home">
-                    <img src="../assets/barcelona.png" alt="">
-                  </div> 
-                  <div class="logo-away">
-                    <img src="../assets/realmadrid.png" alt="">
-                </div>
-              </div>
-              <div class="club-name">
-                    <div class="home-name">
-                      Manchester United
-                    </div>
-                    <div class="away-name">
-                      Manchester United
-                    </div>
-              </div>
-              <div class="score">
-                <span class="home">5</span>
-                <span class="away">0</span>
-              </div>
-              <div class="fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-            <!-- 6th  -->
-            <div class="matches">
-              <div class="time">
-                90 + 4
-              </div>
-              <div class="club-logo">
-                <div class="logo-home">
-                    <img src="../assets/barcelona.png" alt="">
-                  </div> 
-                  <div class="logo-away">
-                    <img src="../assets/realmadrid.png" alt="">
-                </div>
-              </div>
-              <div class="club-name">
-                    <div class="home-name">
-                      Barcelona
-                    </div>
-                    <div class="away-name">
-                      Real Madrid
-                    </div>
-              </div>
-              <div class="score">
-                <span class="home">5</span>
-                <span class="away">0</span>
-              </div>
-              <div class="fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-         
-          
           </div>
+
+            <!-- 2nd -->
+  </div>
 
 </template>
 
 
 <script setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
+import { useTaskStore } from "@/store/Taskstore"
 
+const taskStore = useTaskStore()
 const league = ref("Nigeria League")
 const nigeria = ref("NPFL")
+
+const liveMatches = computed(() =>taskStore.$state.matches)
 </script>
 
 <style>

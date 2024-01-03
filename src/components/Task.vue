@@ -9,8 +9,13 @@
 </template>
 
 <script setup>
-import { useTaskStore } from '../store/Taskstore';''
+import { useTaskStore } from '../store/Taskstore';
+import { useStore } from '@/store/store';
+
+const store = useStore()
 const task = useTaskStore()
+
+const kano = store.$state.kano
 const name =  task.name
 const logo = (task.laliga)
 const country = task.country
