@@ -9,13 +9,16 @@ export const useTaskStore = defineStore('taskStore',{
             'premier', 'bundesliga','serieA','ligue1',
         ],
         memuna:"memuna",
-        matches:[],
+        matches:[
+            {id: 1, teamAway: "kano Pillars", teamHome: "Jigawa State", league: "NPL"}
+        ],
         clubs:[],
         name: "hassan",
         premier:[],
         bundesliga:[],
         serieA:[],
         ligue1:[],
+        favMatch: [],
 
         
         
@@ -52,6 +55,10 @@ export const useTaskStore = defineStore('taskStore',{
 
         addClubLogo(payload){
             // console.log("maimalee")
+        },
+
+        addToFav(payload){
+            this.favMatch.push(payload)
         }
     }
 })

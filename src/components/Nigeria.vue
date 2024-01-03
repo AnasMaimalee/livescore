@@ -1,6 +1,6 @@
 <template>
 
-<div class="country-leagues">
+<div class="country-leagues" v-if="matchLenght > 0"> 
             <div class="country-matches-header">
               <div class="country-detail">
                 <div class="img-logo">
@@ -19,9 +19,10 @@
             </div>
             <!-- maches  --> 
 
-            <div v-for="liveMatch in liveMatches" :key="liveMatch">
-
-            <div class="matches" >
+            <div class="main">
+            <div  v-for="liveMatch in liveMatches" :key="liveMatch">
+            
+              <router-link class="matches" :to="{name:'Match', params:{id:liveMatch.id}}">
               <div class="time">
                 {{ liveMatch.matchTime }}
               </div>
@@ -45,13 +46,14 @@
                 <span class="home">5</span>
                 <span class="away">0</span>
               </div>
-             
               <div class="fav">
-                <i class="bi bi-heart"></i>
+                <span class="material-symbols-outlined" @click="addToFav(liveMatch.id)">
+                   grade
+                </span>
               </div>
+              </router-link>
             </div>
           </div>
-
             <!-- 2nd -->
   </div>
 
@@ -66,9 +68,18 @@ const taskStore = useTaskStore()
 const league = ref("Nigeria League")
 const nigeria = ref("NPFL")
 
+const matchLenght = taskStore.getMatchLenght
 const liveMatches = computed(() =>taskStore.$state.matches)
+
+const addToFav = (payload) =>{
+  taskStore.addToFav(payload)
+}
 </script>
 
 <style>
+  .material-symbols-outlined:hover {
+  color: blue; 
+}
+
 
 </style>

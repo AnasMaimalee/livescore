@@ -2,7 +2,6 @@
     <div v-for="count in country" :key="count.id">
         <span>{{  count.name }}</span><br>
         <div v-for="src in logo" :key="src.id">
-
             <img :src="getImageUrl(src.src)" alt="">
         </div>
     </div>
