@@ -16,6 +16,10 @@
           </div>
           <div class="favourites">
             <i class="bi bi-heart"></i>
+            <span>Element Plus</span>
+          </div>
+          <div class="favourites">
+            <i class="bi bi-heart"></i>
             <span>Favourites</span>
           </div>
           <div class="news">
@@ -30,6 +34,7 @@
           <div class="livescore-bet">
             LiveScore <span>Bet</span>
           </div>
+          
         </div>
         <!-- mobile  -->
         <div class="header">

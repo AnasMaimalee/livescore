@@ -10,7 +10,7 @@ export const useTaskStore = defineStore('taskStore',{
         ],
         memuna:"memuna",
         matches:[
-            {id: 1, teamAway: "kano Pillars", teamHome: "Jigawa State", league: "NPL"}
+            {id: 1, teamAway: "kano Pillars", teamHome: "Jigawa State", league: "NPL", status: 1}
         ],
         clubs:[],
         name: "hassan",
