@@ -78,6 +78,12 @@
                 Next Page <el-icon class="icon--right"><ArrowRight/></el-icon>
                 </el-button>
             </el-button-group>    
+
+            <el-button-group class="ms-4">
+                <el-button type="primary" :icon="Edit" />
+                <el-button type="primary" :icon="Share" />
+                <el-button type="primary" :icon="Delete" />
+            </el-button-group>
     </div>
 </div>
 </template>
