@@ -16,7 +16,7 @@
           </div>
           <div class="favourites">
             <i class="bi bi-heart"></i>
-            <span>Element Plus</span>
+            <span><router-link :to="{name:'Element'}"> Element Plus</router-link></span>
           </div>
           <div class="favourites">
             <i class="bi bi-heart"></i>
@@ -87,7 +87,18 @@
     </div>  
     <router-view></router-view>
 </template>
-<script setup>
+        <script setup>
+        // import { createApp } from 'vue';
+        // import ElementPlus from 'element-plus';
+        // import 'element-plus/lib/theme-chalk/index.css';
+
+        // import App from './App.vue';
+
+        // const app = createApp(App);
+
+        // app.use(ElementPlus);
+        // app.mount('#app');
+
        function openNav(){
         document.getElementById("mySidenav").style.width = "250px";
        }
